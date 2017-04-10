@@ -31,11 +31,11 @@ app.use(express.static(path.join(__dirname,'public')))
 
 
 app.get('/', function(req,res) {
-  res.render('homepage')
+  res.send('homepage')
 })
 
 app.get('/about', function(req,res) {
-  res.render('about')
+  res.send('about')
 })
 
 app.get('/contact', function(req,res) {
