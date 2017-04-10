@@ -11,11 +11,11 @@ mongoose.Promise = global.Promise
 
 var path = require('path')
 
-var db = mongoose.connection;
-db.on('error', console.error.bind(console, 'connection error:'))
-db.once('open'), function() {
-  console.log('WE ARE LIVE!');
-}
+// var db = mongoose.connection;
+// db.on('error', console.error.bind(console, 'connection error:'))
+// db.once('open'), function() {
+//   console.log('WE ARE LIVE!');
+// }
 
 var bodyParser = require('body-parser')
 var methodOverride = require('method-override')
@@ -31,16 +31,17 @@ app.use(express.static(path.join(__dirname,'public')))
 
 
 app.get('/', function(req,res) {
-  res.send('homepage')
+  res.render('homepage')
 })
 
 app.get('/about', function(req,res) {
-  res.send('about')
+  res.render('about')
 })
 
 app.get('/contact', function(req,res) {
-  res.send('contact')
+  res.render('contact')
 })
+
 
 app.listen(port, function(){
   console.log('Express is running on port ' + port);
