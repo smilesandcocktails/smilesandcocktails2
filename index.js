@@ -2,12 +2,12 @@ var express = require('express')
 var app = express()
 var port = process.env.PORT || 8080
 
-var mongoose = require('mongoose')
-var unit = require('./controllers/unitscontroller')
+// var mongoose = require('mongoose')
+// var unit = require('./controllers/unitscontroller')
 
-var dburi = process.env.PROD_MONGODB || 'mongodb://localhost:27017/test'
-mongoose.connect(dburi)
-mongoose.Promise = global.Promise
+// var dburi = process.env.PROD_MONGODB || 'mongodb://localhost:27017/test'
+// mongoose.connect(dburi)
+// mongoose.Promise = global.Promise
 
 var path = require('path')
 
