@@ -31,15 +31,15 @@ app.use(express.static(path.join(__dirname,'public')))
 
 
 app.get('/', function(req,res) {
-  res.render('homepage')
+  res.render('/pages/homepage')
 })
 
 app.get('/about', function(req,res) {
-  res.render('about')
+  res.render('/pages/about')
 })
 
 app.get('/contact', function(req,res) {
-  res.render('contact')
+  res.render('/pages/contact')
 })
 
 
